@@ -1,0 +1,32 @@
+[package]
+name = "chimera"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+aws-config = { version = "1.1.7", features = ["behavior-version-latest"] }
+aws-sdk-chimesdkmessaging = "1.42.0"
+aws-sdk-chimesdkmeetings = "1.43.0"
+aws-sdk-chimesdkvoice = "1.43.0"
+aws-sdk-dynamodb = "1.45.0"
+postgres = "0.19.8"
+clap = { version = "4.5.17", features = ["derive"] }
+toml = "0.8.19"
+serde = { version = "1.0.210", features = ["derive"] }
+tokio = { version = "1", features = ["full"] }
+ruma = { version = "0.10.1", features = [
+    "events",
+    "server-util",
+    "client",
+    "client-ext-client-api",
+    "client-api",
+    "appservice-api"]}
+hyper = "0.14.30"
+serde_json = "1.0.128"
+rand = { version = "0.8.5"}
+
+[source.crates-io]
+replace-with = "vendored-sources"
+
+[source.vendored-sources]
+directory = "vendor"
