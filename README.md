@@ -1,3 +1,6 @@
+# Shelved 
+No use for it atm
+
 # Chimera
 A Matrix bridge app service for Amazon Chime
 
